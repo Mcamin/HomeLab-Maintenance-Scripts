@@ -79,7 +79,7 @@ export TELEGRAM_CHAT_ID="123456789"
 Add them to your shell environment:
 
 ```bash
-nano /etc/environment
+sudo nano /etc/environment
 ```
 
 Add lines:
@@ -92,15 +92,7 @@ TELEGRAM_CHAT_ID="123456789"
 Then reload:
 
 ```bash
-source /etc/environment
-```
-
-Or if you prefer user-only scope:
-
-```bash
-echo 'export TELEGRAM_BOT_TOKEN="123456789:ABCDEFGyourbottoken"' >> ~/.bashrc
-echo 'export TELEGRAM_CHAT_ID="123456789"' >> ~/.bashrc
-source ~/.bashrc
+sudo source /etc/environment
 ```
 
 > 🧠 Tip: You can test the Telegram configuration with

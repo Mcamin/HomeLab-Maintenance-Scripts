@@ -15,7 +15,7 @@
 # 🔧 Configuration
 # ========================
 LOG_DIR="./log/snapraid"
-TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
+TIMESTAMP=$(date '+%Y-%m-%d--%H-%M-%S')
 LOG_FILE="$LOG_DIR/snapraid-sync-${TIMESTAMP}.log"
 PID_FILE="./snapraid-sync.pid"
 
