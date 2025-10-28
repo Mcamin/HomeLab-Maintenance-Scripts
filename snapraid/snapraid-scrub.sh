@@ -15,7 +15,7 @@
 # ========================
 # 🔧 Configuration
 # ========================
-LOG_DIR="./log/snapraid"
+LOG_DIR="./logs/snapraid" # Change to your logs folder
 TIMESTAMP=$(date '+%Y-%m-%d--%H-%M-%S')
 LOG_FILE="$LOG_DIR/snapraid-scrub-${TIMESTAMP}.log"
 PID_FILE="./snapraid-scrub.pid"

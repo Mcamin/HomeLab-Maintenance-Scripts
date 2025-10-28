@@ -12,7 +12,7 @@ It consists of:
 | `snapraid-sync.sh`  | Handles the main SnapRAID `sync` operation, prevents duplicate runs, manages logs, and starts the scrub job automatically after a successful sync. |
 | `snapraid-scrub.sh` | Runs the SnapRAID `scrub` process (default: 50%), with duplicate-run protection, logging, and Telegram status messages.                            |
 
-Each script creates timestamped logs under `./log/snapraid/`.
+Each script creates timestamped logs under `./logs/snapraid/`.
 
 ---
 
@@ -20,7 +20,7 @@ Each script creates timestamped logs under `./log/snapraid/`.
 
 ### 🧱 System
 
-* Linux server running **SnapRAID**
+* Linux server running **[SnapRAID](https://www.snapraid.it/)**
 * Bash shell (`/bin/bash`)
 * `curl` (for Telegram API)
 * `tee`, `nohup`, `ps`, and `hostname` (default utilities)
@@ -47,7 +47,7 @@ You should have a valid `snapraid.conf` file in your working directory or `/etc/
 ├── snapraid-sync.sh         # Main sync logic + triggers scrub
 ├── snapraid-scrub.sh        # Performs scrub, handles notifications
 ├── snapraid-sync.pid        # PID file (created automatically)
-├── log/
+├── logs/
 │   └── snapraid/            # All timestamped log files stored here
 └── snapraid.content         # SnapRAID content file (managed by SnapRAID)
 ```
@@ -114,7 +114,7 @@ Run the orchestrator — it triggers the full sync cycle asynchronously:
 ./snapraid-job.sh
 ```
 
-* It logs the process to a timestamped file (e.g., `log/snapraid/snapraid-job-2025-10-26_14-30-00.log`).
+* It logs the process to a timestamped file (e.g., `logs/snapraid/snapraid-job-2025-10-26--14-30-00.log`).
 * The sync runs in the background.
 * When sync finishes, `snapraid-sync.sh` automatically triggers the scrub job.
 
@@ -131,7 +131,7 @@ If you want to execute the sync script directly and wait for completion:
 This will:
 
 * Prevent duplicate runs (via PID lock)
-* Log everything to `log/snapraid/snapraid-sync-<timestamp>.log`
+* Log everything to `logs/snapraid/snapraid-sync-<timestamp>.log`
 * Send Telegram notification on success or failure
 * Launch `snapraid-scrub.sh` automatically if sync succeeds
 
@@ -203,7 +203,7 @@ Example: Run every day at 3 AM
 🕒 Started SnapRAID Sync: 2025-10-26 03:00:00
 📦 Host: NAS01
 👤 User: root
-📄 Log File: ./log/snapraid/snapraid-sync-2025-10-26_03-00-00.log
+📄 Log File: ./logs/snapraid/snapraid-sync-2025-10-26--03-00-00.log
 -------------------------------------------
 🚀 Starting SnapRAID sync...
 ✅ SnapRAID sync completed successfully!

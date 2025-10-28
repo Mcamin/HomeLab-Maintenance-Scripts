@@ -14,13 +14,13 @@
 # ========================
 # 🔧 Configuration
 # ========================
-LOG_DIR="./log/snapraid"
+LOG_DIR="./logs/snapraid" # Change to your logs folder
 TIMESTAMP=$(date '+%Y-%m-%d--%H-%M-%S')
 LOG_FILE="$LOG_DIR/snapraid-sync-${TIMESTAMP}.log"
 PID_FILE="./snapraid-sync.pid"
 
 # Path to the separate scrub script (adjust if needed)
-SCRUB_SCRIPT="./snapraid-scrub.sh"
+SCRUB_SCRIPT="./snapraid-scrub.sh" # Change to the script location
 
 # Telegram configuration (expect environment vars set by playbook or system)
 TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN}"

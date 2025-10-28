@@ -10,8 +10,8 @@
 # ========================
 # 🔧 Configuration
 # ========================
-SYNC_SCRIPT="./snapraid-sync.sh"
-LOG_DIR="./log/snapraid"
+SYNC_SCRIPT="./snapraid-sync.sh" # Change to the script location
+LOG_DIR="./logs/snapraid" # Change to your logs folder
 TIMESTAMP=$(date '+%Y-%m-%d--%H-%M-%S')
 LOG_FILE="$LOG_DIR/snapraid-job-${TIMESTAMP}.log"
 
