@@ -12,7 +12,7 @@
 # ========================
 SYNC_SCRIPT="./snapraid-sync.sh"
 LOG_DIR="./log/snapraid"
-TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
+TIMESTAMP=$(date '+%Y-%m-%d--%H-%M-%S')
 LOG_FILE="$LOG_DIR/snapraid-job-${TIMESTAMP}.log"
 
 # ========================
