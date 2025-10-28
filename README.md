@@ -26,7 +26,7 @@ homelab-scripts/
 │   └── README.md
 │
 ├── backup/                        # Simple rsync-based copy/backup jobs
-│   ├── copy.sh
+│   ├── rsync-wrapper.sh
 │   └── README.md
 │
 └── README.md                      # (this file)
@@ -84,9 +84,9 @@ See [proxmox/README.md](proxmox/README.md) for setup details and auto-patch opti
 
 A portable rsync wrapper for quick one-line copies or backups.
 
-| Script    | Purpose                                                      |
-| --------- | ------------------------------------------------------------ |
-| `copy.sh` | Runs `rsync` in the background with logging and PID tracking |
+| Script             | Purpose                                                      |
+|--------------------| ------------------------------------------------------------ |
+| `rsync-wrapper.sh` | Runs `rsync` in the background with logging and PID tracking |
 
 **Features:**
 
@@ -98,7 +98,7 @@ A portable rsync wrapper for quick one-line copies or backups.
 Usage:
 
 ```bash
-./copy.sh /var/www/html /mnt/backup/html
+./rsync-wrapper.sh /var/www/html /mnt/backup/html
 ```
 
 See [backup/README.md](backup/README.md) for more examples.
