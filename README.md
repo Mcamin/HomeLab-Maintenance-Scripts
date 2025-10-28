@@ -58,7 +58,7 @@ Automates SnapRAID integrity maintenance with structured logs and Telegram repor
 | `snapraid-sync.sh`  | Handles safe sync with PID lock, triggers scrub          |
 | `snapraid-scrub.sh` | Runs partial scrub (default 50%), sends Telegram updates |
 
-Each run produces detailed, timestamped logs in `./log/snapraid/`.
+Each run produces detailed, timestamped logs in `./logs/snapraid/`.
 
 See the dedicated [snapraid/README.md](snapraid/README.md) for:
 
